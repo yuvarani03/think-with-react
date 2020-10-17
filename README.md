@@ -21,14 +21,9 @@ Whenever you create a first significant change, you should make your first commi
 
 In the end of this document, you will find guidelines on how to submit the exercise.
 
-## Instructions
-As you can see that react is a javascript library. So the 
-
 ### Introduction
 
-In this exercise, you will try to setup the react application. There are various  is a super cool cricket game, where each team compete with each other in one over combat. Each team will get to play 6 balls and the team which scores maximum runs wins the game. You already have all the assets for this version in the assets folder as well as the necessary text in the `index.html`.
-
-Our goal is to understand the ways in which you can include react to your application.
+In this exercise, you will try to setup the react application. As you can see react is a javascript library to create super cool reusable UI. Our goal is to understand the ways in which you can include react to your application.
 
 We will divide our work into four parts:
 
@@ -79,7 +74,18 @@ You're ready to move to the next iteration. :raised_hands:
 
 #### REACT 2 | CHECK N CHECK
 
-Your task in this iteration is to check 
+Your task in this iteration is to check whether you have successfully setup react in your application. To do it inside the app.js, get the div tag like how you get the element using it's id.
+
+```
+const container = document.getElementById('react-container');
+```
+Now the most important step, How to make a difference between Javascript and React. You might have learnt about ReactDOM in your code along session. ReactDOM is the place where you render the output. Now how to render using ReactDOM. Kindly look into the code snippet given below.
+
+```
+ReactDOM.render("Hello! Welcome to React",container);
+```
+If you do the above, you need to get an output similar to this.
+![Image description](https://i1.faceprep.in/ProGrad/l1-output.png)
 
 ## Submission
 
