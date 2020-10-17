@@ -87,6 +87,12 @@ ReactDOM.render("Hello! Welcome to React",container);
 If you do the above, you need to get an output similar to this.
 ![Image description](https://i1.faceprep.in/ProGrad/l1-output.png)
 
+If you get the above output, you can ensure that the react is completely setup in your system.
+
+#### REACT 3 | IS IT A FUNCTION
+
+The component can be a functional component or class component. Now before moving to the class component let us try to use the same example given above and try to convert it as a functional component.
+
 ## Submission
 
 If you didn't add, commit and push the changes you made, this is the last call. :smile:
