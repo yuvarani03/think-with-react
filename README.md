@@ -119,6 +119,9 @@ ReactDOM.render(React.createElement(Container),container);
 Now in this iteration we will try working with the class component. To define a class component. We are going to replicate the same output what we got in function component.
 Check the code snippet below. Replace the above code instead of functional components and you can see that it should print
 
+Hey ProGrads
+Let's rock and roll
+
 ```
 class ReactContainer extends React.Component{
   // constructor - to initialize the state 
@@ -135,7 +138,62 @@ const container = document.getElementById('react-container');
 ReactDOM.render(React.createElement(ReactContainer),container);
 ```
 
+You're ready to move to the next iteration. :raised_hands:
 
+## part II - Use JSX and babel compiler
+In the progressions above, we only relied on features that are natively supported by the browsers. This is why we used a JavaScript function call to tell React what to display:
+However, React also offers an option to use JSX instead.JSX stands for Javascript XML, 
+
+So far whatever we have used we did it directly without the use of Babel compiler. Babel is a very powerful javascript complier which converts react script to Browser acceptable Javascript. As you have learnt that react uses `virtual dom` and babel helps to transpile to browser javascript.
+
+The quickest way to try JSX in your project is to add this <script> tag to your page:
+
+```
+    <!-- Include babel compiler -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+```
+Now you can use JSX in any <script> tag by adding type="text/babel" attribute to it. 
+
+```
+    class ReactContainer extends React.Component{
+    // JSX tags
+    // JSX there should be one parent element
+      render(){
+          return (
+          <div>Hello! Welcome to ProGrads   
+             <div>Let's rock and roll </div>
+         </div> )
+      };  
+  }
+
+const container = document.getElementById('react-container');
+// Direclty pass the component to render
+ReactDOM.render(<ReactContainer/>,container);    
+```
+Isn't the above one so easy. So instead of too many React.createElement you can use JSX which is super cool to use.
+
+## Part III - CREATE REACT APP
+create-react-app is a project aimed at getting you up to speed with React in no time. It provides a ready-made React application starter, so you can dive into building your app without having to deal with Webpack and Babel configurations.
+
+It provides out of the box:
+
+I. A development server with hot reloading
+II. Provides a testing environment with Jest
+III. Allows to build the React app
+IV. Ready for ES6+ syntax
+V. Bundles all your JavaScript and assets
+VI. Comes with CSS autoprefixer, SASS and CSS Modules support
+
+When you run npx create-react-app <app-name>, npx is going to download the most recent create-react-app release, run it, and then remove it from your system. This is great because you will never have an outdated version on your system, and every time you run it, you’re getting the latest and greatest code available.
+
+To create the app  : 
+`npx create-react-app first-react-app`
+
+To run the app : 
+`cd first-react-app
+npm start`
+
+To run it just go to open the console and go the the application directory and just type `npm start`
 
 ## Submission
 
