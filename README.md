@@ -25,12 +25,11 @@ In the end of this document, you will find guidelines on how to submit the exerc
 
 In this exercise, you will try to setup the react application. As you can see react is a javascript library to create super cool reusable UI. Our goal is to understand the ways in which you can include react to your application.
 
-We will divide our work into four parts:
+We will divide our work into three parts:
 
 - part I - Include react library in your html file
 - part II - Use JSX and babel compiler
 - part III - By using npm/yarn 
-- part IV - By using typescript
 
 So let's get started!
 
@@ -92,6 +91,51 @@ If you get the above output, you can ensure that the react is completely setup i
 #### REACT 3 | IS IT A FUNCTION
 
 The component can be a functional component or class component. Now before moving to the class component let us try to use the same example given above and try to convert it as a functional component.
+This is going to be our output.
+![Image description](https://i1.faceprep.in/ProGrad/l1-output2.png)
+
+To get the above it is quite simple. Check the code snippet given below. There is no modification required in the index.html.
+**React.createElement has three attributes (component,props,children)**
+**Component can be a react component - reusable piece of UI.
+**Props are properties of the component or element.
+**children can be a nested component or html element.
+**In the below code when you check the react element it has a `div` tag followed by null and a string called `Hey ProGrads! Welcome to React Learning`. The `div` tag refers to the component. null refers to the property and the statement is the children. When you inspect the element you can see a output similar to this. The next `div` tag is the children.**
+![Image description](https://i1.faceprep.in/ProGrad/l1-output3.png)
+
+```
+// Functional component
+const Container = () =>{
+    return React.createElement(`div`,null,`Hey ProGrads! Welcome to React Learning`,
+       React.createElement(`div`,null,`Let's rock and roll`)
+       );
+}
+// Render the Container
+const container = document.getElementById('react-container');
+ReactDOM.render(React.createElement(Container),container);
+```
+
+#### REACT 3 | NOW IT'S CLASS TIME
+
+Now in this iteration we will try working with the class component. To define a class component. We are going to replicate the same output what we got in function component.
+Check the code snippet below. Replace the above code instead of functional components and you can see that it should print
+
+```
+class ReactContainer extends React.Component{
+  // constructor - to initialize the state 
+
+  // render method to render the react dom 
+    render(){
+        return React.createElement(`div`,null,`Hey ProGrads`,
+        React.createElement(`div`,null,`Let's rock and roll`)
+        );
+    }
+  
+}
+const container = document.getElementById('react-container');
+ReactDOM.render(React.createElement(ReactContainer),container);
+```
+
+
 
 ## Submission
 
